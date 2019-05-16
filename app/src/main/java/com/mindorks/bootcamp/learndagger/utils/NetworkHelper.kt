@@ -7,7 +7,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class NetworkHelper @Inject constructor(@ApplicationContext val context: Context) {
+class NetworkHelper @Inject constructor(@ApplicationContext private val context: Context) {
 
     val isNetworkConnected: Boolean = false
 

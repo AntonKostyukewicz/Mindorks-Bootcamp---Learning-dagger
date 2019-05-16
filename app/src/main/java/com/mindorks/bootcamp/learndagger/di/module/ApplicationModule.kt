@@ -15,26 +15,18 @@ class ApplicationModule(private val application: MyApplication) {
 
     @ApplicationContext
     @Provides
-    fun provideContext(): Context {
-        return application
-    }
+    fun provideContext(): Context = application
 
     @Provides
     @DatabaseInfo
-    fun provideDatabaseName(): String {
-        return "dummy_db"
-    }
+    fun provideDatabaseName(): String =  "dummy_db"
 
     @Provides
     @DatabaseInfo
-    fun provideDatabaseVersion(): Int? {
-        return 1
-    }
+    fun provideDatabaseVersion(): Int = 1
 
     @Provides
     @NetworkInfo
-    fun provideApiKey(): String {
-        return "SOME_API_KEY"
-    }
+    fun provideApiKey(): String = "SOME_API_KEY"
 
 }

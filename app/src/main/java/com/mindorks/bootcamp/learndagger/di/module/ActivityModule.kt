@@ -13,7 +13,6 @@ class ActivityModule(private val activity: Activity) {
 
     @ActivityContext
     @Provides
-    fun provideContext(): Context {
-        return activity
-    }
+    fun provideContext(): Context =  activity
+
 }
